@@ -1,0 +1,24 @@
+@external propSource highlighting from "./highlight.js"
+
+@top Program { Node }
+
+Node { "-" Identifier Name ":" Term+ }
+
+Term { Word | "{" Expression "}" }
+
+Expression { Scalar }
+
+Scalar { Number | String }
+
+@skip { space }
+
+@tokens {
+  "-"
+  ":"
+  Identifier { $[A-Za-z_]+ }
+  Name { $[A-Za-z_]+ }
+  Word { $[A-Za-z_]+ }
+  space { @whitespace+ }
+  Number { $[0-9]+ }
+  String { '"' !["]* '"' }
+}

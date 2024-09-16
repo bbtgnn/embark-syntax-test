@@ -1,0 +1,61 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@lezer/highlight':
+    specifier: ^1.0.0
+    version: 1.2.0
+  '@lezer/lr':
+    specifier: ^1.0.0
+    version: 1.4.0
+
+devDependencies:
+  '@lezer/generator':
+    specifier: ^1.0.0
+    version: 1.6.0
+  rollup:
+    specifier: ^3.0.0
+    version: 3.29.4
+
+packages:
+
+  /@lezer/common@1.2.1:
+    resolution: {integrity: sha512-yemX0ZD2xS/73llMZIK6KplkjIjf2EvAHcinDi/TfJ9hS25G0388+ClHt6/3but0oOxinTcQHJLDXh6w1crzFQ==}
+
+  /@lezer/generator@1.6.0:
+    resolution: {integrity: sha512-mDwFNchv4jBEoZBaZbr5GlKR7BM6W/ZanTOZN6p4avuzcmYHTZ0nIbwtBqvXoeBrqmFSvL2zHL5TX9FWkXKc2w==}
+    hasBin: true
+    dependencies:
+      '@lezer/common': 1.2.1
+      '@lezer/lr': 1.4.0
+    dev: true
+
+  /@lezer/highlight@1.2.0:
+    resolution: {integrity: sha512-WrS5Mw51sGrpqjlh3d4/fOwpEV2Hd3YOkp9DBt4k8XZQcoTHZFB7sx030A6OcahF4J1nDQAa3jXlTVVYH50IFA==}
+    dependencies:
+      '@lezer/common': 1.2.1
+    dev: false
+
+  /@lezer/lr@1.4.0:
+    resolution: {integrity: sha512-Wst46p51km8gH0ZUmeNrtpRYmdlRHUpN1DQd3GFAyKANi8WVz8c2jHYTf1CVScFaCjQw1iO3ZZdqGDxQPRErTg==}
+    dependencies:
+      '@lezer/common': 1.2.1
+
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /rollup@3.29.4:
+    resolution: {integrity: sha512-oWzmBZwvYrU0iJHtDmhsm662rC15FRXmcjCk1xD771dFDx5jJ02ufAQQTn0etB2emNk4J9EZg/yWKpsn9BWGRw==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: true
